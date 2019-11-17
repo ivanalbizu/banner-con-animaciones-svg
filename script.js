@@ -46,13 +46,13 @@ const handleClick = event => {
     box.classList.toggle('box--active');
 
     if (box.classList.contains('box--active')) {
-        closeBox(box);
-    } else {
         openBox(box);
+    } else {
+        closeBox(box);
     }    
 }
 
-const closeBox = (box) => {
+const openBox = (box) => {
     const x = getComputedStyle(document.documentElement).getPropertyValue('--x');
     const y = getComputedStyle(document.documentElement).getPropertyValue('--y');
 
@@ -65,7 +65,7 @@ const closeBox = (box) => {
     box.querySelector('g').appendChild(newCircle);
 }
 
-const openBox = (box) => {
+const closeBox = (box) => {
     let {x,y} = coord(event);
     
     let root = document.documentElement;
