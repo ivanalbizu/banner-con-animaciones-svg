@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+:root {
+    --x: -60px;
+    --y: -60px;
+    --x-close: -60px;
+    --y-close: -60px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #000;
+}
+svg {
+    width: 100%;
+}
+text {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #0c0c0c;
+    max-width: 90%;
+    margin: auto;
+    .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+}
+.mask {
+    &__image {
+        cursor: none;
+    }
+    &__circle {
+        transform: translate(-120px);
+    }
+    &__text {
+        font-size: 120px;
+        text-shadow: 3px 3px 5px #2f2b2b;
+    }
+    &:hover {
+        .mask__circle {
+            transform: translate(var(--x), var(--y));
+        }
+    }
+}
+.link {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+
+    width: 80%;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s;
+    &__text {
+        font-size: 40px;
+        fill: #fff;
+    }
+}
+.box--active {
+    .mask__image {
+        cursor: default;
+    }
+    .link {    
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, 0);
+        transition: opacity 1s ease-in-out .4s;
+    }
+}
+
+.circle-click {
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-name: circle-click;
+    pointer-events: none;
+}
+.circle-click-closing {
+    animation-duration: .5s;
+    animation-name: circle-click-closing;
+}
+@keyframes circle-click {
+    from {
+        r: 60;
+    }
+    to {
+        r: 145%;
+    }
+}
+@keyframes circle-click-closing {
+    from {
+        r: 145%;
+    }
+    to {
+        cx: var(--x-close);
+        cy: var(--y-close);
+        r: 0;
+    }
+}
+
+
+@media (min-width: 720px) {
+    .wrapper {
+        .box {
+            width: 50%;
+        }
+    }
+}
+@media (min-width: 1420px) {
+    .wrapper {
+        max-width: 76%;
+    }
+}

@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700&display=swap");
+:root {
+  --x: -60px;
+  --y: -60px;
+  --x-close: -60px;
+  --y-close: -60px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+}
+
+svg {
+  width: 100%;
+}
+
+text {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  background-color: #0c0c0c;
+  max-width: 90%;
+  margin: auto;
+}
+
+.wrapper .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.mask__image {
+  cursor: none;
+}
+
+.mask__circle {
+  -webkit-transform: translate(-120px);
+          transform: translate(-120px);
+}
+
+.mask__text {
+  font-size: 120px;
+  text-shadow: 3px 3px 5px #2f2b2b;
+}
+
+.mask:hover .mask__circle {
+  -webkit-transform: translate(var(--x), var(--y));
+          transform: translate(var(--x), var(--y));
+}
+
+.link {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 80%;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.link__text {
+  font-size: 40px;
+  fill: #fff;
+}
+
+.box--active .mask__image {
+  cursor: default;
+}
+
+.box--active .link {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: opacity 1s ease-in-out .4s;
+  transition: opacity 1s ease-in-out .4s;
+}
+
+.circle-click {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: circle-click;
+          animation-name: circle-click;
+  pointer-events: none;
+}
+
+.circle-click-closing {
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-name: circle-click-closing;
+          animation-name: circle-click-closing;
+}
+
+@-webkit-keyframes circle-click {
+  from {
+    r: 60;
+  }
+  to {
+    r: 145%;
+  }
+}
+
+@keyframes circle-click {
+  from {
+    r: 60;
+  }
+  to {
+    r: 145%;
+  }
+}
+
+@-webkit-keyframes circle-click-closing {
+  from {
+    r: 145%;
+  }
+  to {
+    cx: var(--x-close);
+    cy: var(--y-close);
+    r: 0;
+  }
+}
+
+@keyframes circle-click-closing {
+  from {
+    r: 145%;
+  }
+  to {
+    cx: var(--x-close);
+    cy: var(--y-close);
+    r: 0;
+  }
+}
+
+@media (min-width: 720px) {
+  .wrapper .box {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1420px) {
+  .wrapper {
+    max-width: 76%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

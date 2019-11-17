@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Banner SVG</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="box">
+      <svg viewbox="0 0 1000 600" class="mask" id="svg-mujer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <mask id="mask-mujer">
+            <g fill="white">
+              <rect width="100%" height="100%" fill="#555"/>
+              <circle class="mask__circle" cx="0" cy="0" r="60"/>
+              <circle class="mask__circle" cx="0" cy="0" r="60" fill="none" stroke= "#fff" stroke-width="1%">
+                <animate attributeType="SVG" attributeName="r" begin="0s" dur="1.5s" repeatCount="indefinite" from="1%" to="10%"/>
+                <animate attributeType="CSS" attributeName="stroke-width" begin="0s" dur="1.5s" repeatCount="indefinite" from="3%" to="0%"/>
+                <animate attributeType="CSS" attributeName="opacity" begin="0s" dur="1.5s" repeatCount="indefinite" from="1" to="0"/>
+              </circle>
+              <text x="50%" y="50%" class="mask__text" dominant-baseline="middle" text-anchor="middle">Mujer</text>
+            </g>
+          </mask>
+        </defs>
+        <image width="100%" class="mask__image" xlink:href="img/mujer.jpg" style="mask: url(#mask-mujer)"/>
+      </svg>
+      <svg viewbox="0 0 1000 120" class="link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <a href="#!">
+          <text x="50%" y="50%" class="link__text" dominant-baseline="middle" text-anchor="middle">Mujer</text>
+        </a>
+      </svg>
+    </div>
+    <div class="box">
+      <svg viewbox="0 0 1000 600" class="mask" id="svg-hombre" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <mask id="mask-hombre">
+            <g fill="white">
+              <rect width="100%" height="100%" fill="#555"/>
+              <circle class="mask__circle" cx="0" cy="0" r="60"/>
+              <circle class="mask__circle" cx="0" cy="0" r="60" fill="none" stroke= "#fff" stroke-width="1%">
+                <animate attributeType="SVG" attributeName="r" begin="0s" dur="1.5s" repeatCount="indefinite" from="1%" to="10%"/>
+                <animate attributeType="CSS" attributeName="stroke-width" begin="0s" dur="1.5s" repeatCount="indefinite" from="3%" to="0%"/>
+                <animate attributeType="CSS" attributeName="opacity" begin="0s" dur="1.5s" repeatCount="indefinite" from="1" to="0"/>
+              </circle>
+              <text x="50%" y="50%" class="mask__text" dominant-baseline="middle" text-anchor="middle">Hombre</text>
+            </g>
+          </mask>
+        </defs>
+        <image width="100%" class="mask__image" xlink:href="img/hombre.jpg" style="mask: url(#mask-hombre)"/>
+      </svg>
+      <svg viewbox="0 0 1000 120" class="link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <a href="#!">
+          <text x="50%" y="50%" class="link__text" dominant-baseline="middle" text-anchor="middle">Hombre</text>
+        </a>
+      </svg>
+    </div>
+    <div class="box">
+      <svg viewbox="0 0 1000 600" class="mask" id="svg-accesorio" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <mask id="mask-accesorio">
+            <g fill="white">
+              <rect width="100%" height="100%" fill="#555"/>
+              <circle class="mask__circle" cx="0" cy="0" r="60"/>
+              <circle class="mask__circle" cx="0" cy="0" r="60" fill="none" stroke= "#fff" stroke-width="1%">
+                <animate attributeType="SVG" attributeName="r" begin="0s" dur="1.5s" repeatCount="indefinite" from="1%" to="10%"/>
+                <animate attributeType="CSS" attributeName="stroke-width" begin="0s" dur="1.5s" repeatCount="indefinite" from="3%" to="0%"/>
+                <animate attributeType="CSS" attributeName="opacity" begin="0s" dur="1.5s" repeatCount="indefinite" from="1" to="0"/>
+              </circle>
+              <text x="50%" y="50%" class="mask__text" dominant-baseline="middle" text-anchor="middle">Accesorios</text>
+            </g>
+          </mask>
+        </defs>
+        <image width="100%" class="mask__image" xlink:href="img/accesorio.jpg" style="mask: url(#mask-accesorio)"/>
+      </svg>
+      <svg viewbox="0 0 1000 120" class="link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <a href="#!">
+          <text x="50%" y="50%" class="link__text" dominant-baseline="middle" text-anchor="middle">Accesorios</text>
+        </a>
+      </svg>
+    </div>
+    <div class="box">
+      <svg viewbox="0 0 1000 600" class="mask" id="svg-perfume" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <mask id="mask-perfume">
+            <g fill="white">
+              <rect width="100%" height="100%" fill="#555"/>
+              <circle class="mask__circle" cx="0" cy="0" r="60"/>
+              <circle class="mask__circle" cx="0" cy="0" r="60" fill="none" stroke= "#fff" stroke-width="1%">
+                <animate attributeType="SVG" attributeName="r" begin="0s" dur="1.5s" repeatCount="indefinite" from="1%" to="10%"/>
+                <animate attributeType="CSS" attributeName="stroke-width" begin="0s" dur="1.5s" repeatCount="indefinite" from="3%" to="0%"/>
+                <animate attributeType="CSS" attributeName="opacity" begin="0s" dur="1.5s" repeatCount="indefinite" from="1" to="0"/>
+              </circle>
+              <text x="50%" y="50%" class="mask__text" dominant-baseline="middle" text-anchor="middle">Perfumes</text>
+            </g>
+          </mask>
+        </defs>
+        <image width="100%" class="mask__image" xlink:href="img/perfume.jpg" style="mask: url(#mask-perfume)"/>
+      </svg>
+      <svg viewbox="0 0 1000 120" class="link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <a href="#!">
+          <text x="50%" y="50%" class="link__text" dominant-baseline="middle" text-anchor="middle">Perfumes</text>
+        </a>
+      </svg>
+    </div>    
+  </div>
+</body>
+</html>
